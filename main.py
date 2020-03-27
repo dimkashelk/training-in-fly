@@ -40,5 +40,12 @@ def login():
     return render_template('autorization.html', title='Аварийный доступ')
 
 
+@app.route('/distribution')
+def distribution():
+    return render_template('distribution.html', people=['Ридли Скот', 'Энди Уир',
+                                                        'Марк Уотни', 'Венката Капур',
+                                                        'Тедди Сандерс', 'Шон Бин'])
+
+
 if __name__ == '__main__':
     app.run(port=8080, host='127.0.0.1')

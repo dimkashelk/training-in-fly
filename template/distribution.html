@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% set a = 'Каюта №' %}
+{% for i in people %}
+<p align="center">{{ i }} - {{ a }}{{ loop.index }} {% if loop.first %} - капитан корабля {% endif %}</p>
+{% endfor %}
+{% endblock %}
