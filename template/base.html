@@ -3,14 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <title>{{ title }}</title>
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="C:\Users\shelk\.PyCharm2019.1\config\scratches\flask-wtf\static\css\style.css">
+    <style>
+        h4 {
+            margin-left: 20px;
+            color: burlywood;
+        }
+
+        .navbar {
+            width: 450px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        p {
+            margin-bottom: auto;
+            margin-top: auto;
+            font-size: 30px;
+        }
+    </style>
 </head>
 <body>
 <h1>Миссия Колонизация Марса</h1>
 <h4>И на Марсе будут яблони цвести!</h4>
-{% if 'инженер' in prof  %}
+<div class="navbar">
+    <img src="../static/img/MARS-2-7.png">
+    <p>Аварийный доступ</p>
+</div>
+{% if 'инженер' in prof %}
 <img align="center" src="../static/img/science_simulator.png">
 {% elif 'строитель' in prof %}
 <img align="center" src="../static/img/build_simulator.png">
 {% endif %}
+<main role="main" class="container">
+    {% block content %}{% endblock %}
+</main>
 </body>
 </html>

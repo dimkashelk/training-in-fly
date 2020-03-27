@@ -35,5 +35,10 @@ def answer():
     return render_template('auto_answer.html', answer=a)
 
 
+@app.route('/login')
+def login():
+    return render_template('autorization.html', title='Аварийный доступ')
+
+
 if __name__ == '__main__':
     app.run(port=8080, host='127.0.0.1')
