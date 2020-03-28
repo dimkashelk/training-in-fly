@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+<table border="0" align="center">
+    <tr align="left">
+        <td class="mane">Цвет стен</td>
+        <td class="mane">Эмблема</td>
+    </tr>
+    <tr align="right">
+        {% if sex == 'male' and age < 21%}
+        <td class="male young"></td>
+        {% elif sex == 'male' and age >= 21 %}
+        <td class="male"></td>
+        {% elif sex == 'female' and age < 21 %}
+        <td class="female young"></td>
+        {% elif sex == 'female' and age >= 21 %}
+        <td class="female"></td>
+        {% endif %}
+
+        {% if sex == 'male' and age < 21%}
+        <td>
+            <img src="https://img2.freepng.ru/20180324/ehe/kisspng-extraterrestrial-life-extraterrestrials-in-fiction-cartoon-aliens-for-kids-5ab66263e09e19.5823849815219021799201.jpg">
+        </td>
+        {% elif sex == 'male' and age >= 21 %}
+        <td>
+            <img src="http://static.ipaustralia.com.au/store3/14/69/1469544.1.high.jpg">
+        </td>
+        {% elif sex == 'female' and age < 21 %}
+        <td><img
+                src="https://img2.freepng.ru/20190709/vrx/kisspng-clip-art-extraterrestrial-life-image-vector-graphi-sci-vakanzi-clipart-5d241c7d6121d7.2460325715626476773979.jpg">
+        </td>
+        {% elif sex == 'female' and age >= 21 %}
+        <td><img src="https://yt3.ggpht.com/a/AATXAJzSh5uzKA1jYLtV7-NUjA9Gg9NZALYsjZvP1Q=s900-c-k-c0xffffffff-no-rj-mo">
+        </td>
+        {% endif %}
+    </tr>
+</table>
+{% endblock %}

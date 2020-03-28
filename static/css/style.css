@@ -3,14 +3,34 @@ h4 {
     color: burlywood;
 }
 
-.navbar {
-    width: 450px;
-    margin-left: auto;
-    margin-right: auto;
+h1 {
+    margin-left: 20px;
 }
 
-p {
-    margin-bottom: auto;
-    margin-top: auto;
-    font-size: 30px;
+.young {
+    filter: opacity(50%);
+}
+
+.female {
+    background-color: darkorange;
+    width: 200px;
+    height: 200px;
+}
+
+.male {
+    background-color: blue;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+}
+
+.mane {
+    background-color: RGB(178, 178, 178);
+    text-align: center;
+    color: black;
+}
+
+img {
+    width: 200px;
+    height: 200px;
 }

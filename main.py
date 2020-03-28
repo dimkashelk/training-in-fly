@@ -47,5 +47,10 @@ def distribution():
                                                         'Тедди Сандерс', 'Шон Бин'])
 
 
+@app.route('/table/<sex>/<int:age>')
+def param(sex, age):
+    return render_template('param.html', sex=sex, age=age)
+
+
 if __name__ == '__main__':
     app.run(port=8080, host='127.0.0.1')
