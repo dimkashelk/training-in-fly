@@ -1,6 +1,8 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
+import os
 
 app = Flask(__name__, template_folder='./template', static_folder='./static')
+index = 4
 
 
 @app.route('/<string:title>')
@@ -50,6 +52,25 @@ def distribution():
 @app.route('/table/<sex>/<int:age>')
 def param(sex, age):
     return render_template('param.html', sex=sex, age=age)
+
+
+@app.route('/galery', methods=['POST', 'GET'])
+def galery():
+    global index
+    files = []
+    for i in os.listdir('C:\\Users\\shelk\\.PyCharm2019.1\\config\\scratches\\flask-wtf\\static\\img'):
+        if i.startswith('c') and i.endswith('.jpg'):
+            files.append(i)
+    print(files, request.method)
+    if request.method == 'GET':
+        return render_template('galery.html', files=files)
+    elif request.method == 'POST':
+        f = request.files['file']
+        with open(f'static/img/c{index}.jpg', 'wb') as file:
+            file.write(f.read())
+        files.append(f'c{index}.jpg')
+        index += 1
+        return render_template('galery.html', files=files)
 
 
 if __name__ == '__main__':
