@@ -1,5 +1,7 @@
 from flask import Flask, render_template, request
 import os
+import json
+from random import randint
 
 app = Flask(__name__, template_folder='./template', static_folder='./static')
 index = 4
@@ -73,5 +75,14 @@ def galery():
         return render_template('galery.html', files=files)
 
 
+@app.route('/member')
+def member():
+    with open('./template/package.json', encoding='utf-8') as file:
+        data = json.load(file)
+    crew = data['crew']
+    return render_template('member.html', a=crew[randint(0, len(crew) - 1)])
+
+
 if __name__ == '__main__':
     app.run(port=8080, host='127.0.0.1')
+# http://127.0.0.1:8080/member

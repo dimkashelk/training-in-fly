@@ -1,0 +1,62 @@
+{
+  "crew": [
+    {
+      "name": "Ридли",
+      "surname": "Скот",
+      "avatar": "https://mishka-knizhka.ru/wp-content/uploads/2019/01/raskraska_roboty29.jpg",
+      "profession": [
+        "инженер-исследователь",
+        "пилот",
+        "строитель"
+      ]
+    },
+    {
+      "name": "Энди",
+      "surname": "Уир",
+      "avatar": "https://colate.ru/wp-content/uploads/robot-uchenik.jpg",
+      "profession": [
+        "экзобиолог",
+        "врач",
+        "инженер по терраформированию"
+      ]
+    },
+    {
+      "name": "Марк",
+      "surname": "Уотни",
+      "avatar": "https://raskraska1.com/assets/images/resources/45/raskraski-roboti1.jpg",
+      "profession": [
+        "климатолог",
+        "специалист по радиационной защите",
+        "астрогеолог"
+      ]
+    },
+    {
+      "name": "Венката",
+      "surname": "Капур",
+      "avatar": "https://boy.raskraski.link/uploads/6/3/7/Robot-mashet-rukoy_6370.jpg",
+      "profession": [
+        "гляциолог",
+        "инженер жизнеобеспечения",
+        "метеоролог"
+      ]
+    },
+    {
+      "name": "Тедди",
+      "surname": "Сандерс",
+      "avatar": "https://shutniki.club/wp-content/uploads/2019/12/raskraska_robot_10_20183335.jpg",
+      "profession": [
+        "оператор марсохода",
+        "киберинженер"
+      ]
+    },
+    {
+      "name": "Шон",
+      "surname": "Бин",
+      "avatar": "https://colate.ru/wp-content/uploads/robot-operator.jpg",
+      "profession": [
+        "штурман",
+        "пилот дронов"
+      ]
+    }
+  ]
+}

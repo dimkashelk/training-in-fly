@@ -49,19 +49,14 @@
         }
 
         img {
-            width: 500px;
-            height: 600px;
+            width: 300px;
+            height: auto;
         }
     </style>
 </head>
 <body>
 <h1>Миссия Колонизация Марса</h1>
 <h4>И на Марсе будут яблони цвести!</h4>
-{% if 'инженер' in prof %}
-<img align="center" src="../static/img/science_simulator.png">
-{% elif 'строитель' in prof %}
-<img align="center" src="../static/img/build_simulator.png">
-{% endif %}
 <main role="main" class="container">
     {% block content %}{% endblock %}
 </main>
